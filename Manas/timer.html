@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Timer</title>
+    <link rel="icon" href="./img/stopwatch.png" type="png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="./timer.css">
+    
+</head>
+<body>
+
+    <header>
+
+        <h1>Let's Meditate!</h1>
+
+        <div class="timer-box">
+            <p class="timer-display" id="timer">00:00</p>
+            <div class="btn">
+                <button onclick="startTimer(300)">5 Minutes</button>
+                <button onclick="startTimer(600)">10 Minutes</button>
+                <button onclick="startTimer(900)">15 Minutes</button>
+
+                <audio id="timerSound">
+                    <source src="./music.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+
+            </div>
+            <div class="back">
+                <a href="../landingpage.html">
+                    <button class="back-button">Go Back</button>
+                </a>
+                
+            </div>
+                
+        </div>
+
+    </header>
+
+
+
+<script>
+let timerInterval;
+let audio = document.getElementById('timerSound');
+
+function startTimer(durationInSeconds) {
+    playSound();
+
+    clearInterval(timerInterval);
+    const timerDisplay = document.getElementById('timer');
+    
+    let timer = durationInSeconds;
+    
+    timerInterval = setInterval(function () {
+        const minutes = Math.floor(timer / 60);
+        const seconds = timer % 60;
+
+        timerDisplay.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+
+        if (--timer < 0) {
+            clearInterval(timerInterval);
+            timerDisplay.textContent = 'Time is up!';
+        }
+    }, 1000);
+
+    function playSound() {
+        audio.play();
+    }
+}
+</script>
+    
+</body>
+</html>

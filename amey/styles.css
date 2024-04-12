@@ -1,0 +1,126 @@
+:root {
+  --header-height:3.5rem;
+    --first-color: hsl(260,100%,66%);
+    --second-color: hsl(328,100%,66%);
+    --gradient-color: linear-gradient(75deg,
+        var(--second-color) 12%,
+        var(--first-color) 90%);
+    --first-color-light: hsl(260,88%,92%);
+    --title-color: hsl(260, 80%, 18%);
+    --text-color: hsl(260, 24%, 32%);
+    --text-color-light: hsl(260, 16%, 65%);
+    --white-color: hsl(0, 0%, 100%);
+    --body-color: hsl(260, 100%, 97%);
+    --container-color: hsl(0, 0%, 100%);
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--gradient-color);
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.quiz-container {
+  background: var(--body-color);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px auto;
+  width: 50vw;
+  min-width: 600px;
+ /* Change this to align items to the left */
+}
+
+h1 {
+  color: var(--title-color);
+  text-align: center;
+  font-size: 2.2rem;
+}
+h4 {
+  color: var(--title-color);
+  text-align: left;
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1.5rem;
+ 
+}
+
+.answer {
+  margin: 5px;
+  cursor: pointer;
+  background-color: #f8f8f8;
+  padding: 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  font-size: 1.2rem;
+}
+
+.answer:checked {
+  background-color: #e0e0e0;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 20px;
+  width: 50%;
+  font-size: 1.2rem;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.q {
+  margin-bottom: 20px;
+}
+
+label {
+  margin-left: 5px;
+  cursor: pointer;
+  font-size: 1.4rem;
+  padding-bottom: 50px;
+}
+
+ #result {
+  visibility: hidden;
+  background: var(--white-color);
+  margin: 30px auto;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 50%;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} 
+
+
+/* Add some hover styles for better user experience */
+.answer:hover {
+  background-color: #e0e0e0;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Add some responsive styles for smaller screens */
+@media (max-width: 600px) {
+  .quiz-container {
+    width: 90%;
+  }
+
+  button,
+  #result {
+    width: 90%;
+  }
+}

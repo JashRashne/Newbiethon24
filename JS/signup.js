@@ -43,7 +43,8 @@ submitBtn.addEventListener("click", function(){
   current += 1;
   setTimeout(function(){
     alert("Your Form Successfully Signed up");
-    location.reload();
+    // location.reload();
+    window.location.href = "./landingpage.html";
   },800);
 });
 
@@ -71,21 +72,3 @@ prevBtnFourth.addEventListener("click", function(event){
   progressText[current - 2].classList.remove("active");
   current -= 1;
 });
-
-function showName(){
-  const html = `
-    <div class="container">
-        <i class="icon-cupcake logo"></i>
-        <h1 class="site-title">${localStorage.getItem("nameOne", JSON.stringify(firstName))} ${localStorage.getItem("nameTwo", JSON.stringify(lastName))}</h1>
-        <small class="site-description">Student</small>
-    </div>
-    `
-
-    display = document.querySelector('.hero');
-    display.innerHTML = html;
-
-    console.log(html);
-}
-
-showName();
-

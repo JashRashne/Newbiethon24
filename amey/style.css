@@ -1,0 +1,89 @@
+:root {
+  --header-height:3.5rem;
+    --first-color: hsl(260,100%,66%);
+    --second-color: hsl(328,100%,66%);
+    --gradient-color: linear-gradient(75deg,
+        var(--second-color) 12%,
+        var(--first-color) 90%);
+    --first-color-light: hsl(260,88%,92%);
+    --title-color: hsl(260, 80%, 18%);
+    --text-color: hsl(260, 24%, 32%);
+    --text-color-light: hsl(260, 16%, 65%);
+    --white-color: hsl(0, 0%, 100%);
+    --body-color: hsl(260, 100%, 97%);
+    --container-color: hsl(0, 0%, 100%);
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: var(--gradient-color);
+}
+
+header {
+  background-color: var(--title-color);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+
+}
+
+nav ul li {
+  display: inline;
+  
+  
+}
+
+nav ul li a {
+  color: #333;
+  text-decoration: none;
+  
+  
+}
+
+nav ul li a:hover {
+  color: #999;
+}
+
+section {
+  padding: 2rem;
+  margin: 2rem;
+  background-color: var(--container-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+.list {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.remedies {
+  padding: 0;
+  list-style-type: none;
+}
+
+.remedies li {
+  padding: 0.5rem 0;
+}
+
+footer {
+  background-color: var(--title-color);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
