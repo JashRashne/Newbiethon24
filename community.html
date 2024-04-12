@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nutritionist Community</title>
+    <link rel="stylesheet" href="./CSS/community.css" />
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header class="header">
+
+      <a href="index.html" class="logo"><i class="ri-leaf-fill"></i> Homi</a>
+  
+      <nav class="navbar">
+          <!-- <ul>
+              <li><a href="#">adopt</a></li>
+        <li><a href="#">Rescue</a></li>
+        <li><a href="#">Report</a></li>
+        <li><a href="#">volunteer</a></li>
+        <li><a href="#">community</a></li>
+        <li><a href="#">Support us</a></li>  
+          </ul> -->
+      </nav>
+  
+      <div class="icons">
+        <div class="fas fa-bars" id="menu-btn"></div>
+        <a href="landingpage.html" class="btn">HOME</a>     
+    </div>
+  
+  </header>
+
+ 
+
+  <div class="community-content">
+    <!-- <div class="blurr"></div> -->
+    <div class="blurr">
+        <div class="meet-modal">
+            <button class="xbutton" onclick="handleModal('blurr')">X</button>
+            <div class="meet-iframe">
+                <iframe height="100%" width="100%" src="https://homi.daily.co/homi" frameborder="0" style="
+                    
+                    left: 50%;
+                    top: 50%;
+                    position: absolute;
+                    transform: translate(-50%,-50%);
+                    z-index: 10;
+                    
+                    "></iframe>
+            </div>
+            <button onclick="handleModal('meet-iframe')">
+                JOIN A MEET!
+            </button> 
+            
+        </div>
+        
+    </div>
+
+    <!-- sidebar starts -->
+    <div class="sidebar">
+      <div class="sidebar-fa">
+        
+        <h1 style="color:#1FD6A5">Benefits of Nutrition</h1>
+        <video width="300" height="200" class="video" controls>
+          <source src="./images/community/diet.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+      </div>
+      <br><br>
+      <div class="sidebar-hn">
+        
+        <h1 style="color: #1FD6A5;">Helpline numbers</h1><br>
+        <div class="helpline-numbers">
+          <li><b>YOGA INDIA - Emergency Care</b><p>&nbsp; &nbsp; &nbsp; +919820122602 
+          </p></li>
+          <li><b>Patanjali  - Natural Care </b><p>&nbsp; &nbsp; &nbsp; +919873302580
+          </p></li>
+          <li><b>Herbalife Nutritional Supps </b><p>&nbsp; &nbsp; &nbsp; 011-23355883 
+          </p></li>
+          <li><b>Amway Nutritionists</b><p>&nbsp; &nbsp; &nbsp; +919892571421
+          </p></li>
+        </div>
+      </div>
+
+      
+      
+      
+    </div>
+    <!-- sidebar ends -->
+
+    <!-- feed starts -->
+    <div class="feed">
+      <div class="feed__header">
+        <h2>Home</h2>
+      </div>
+
+      <!-- tweetbox starts -->
+      <div class="tweetBox">
+        <form id="form">
+          <div class="tweetbox__input">
+            <img
+              src="https://i.pinimg.com/originals/a6/58/32/a65832155622ac173337874f02b218fb.png"
+              alt=""
+            />
+            <input type="text" placeholder="Share and Ask" id="tweet" />
+          </div>
+          <button class="tweetBox__tweetButton" id="post-btn" type="button" >Post</button>
+        </form>
+      </div>
+      <!-- tweetbox ends -->
+
+      <!-- post starts -->
+      <div id="newposts">
+        <ul id="newposts-ul"></ul>
+      </div>
+      <div class="post">
+        <div onclick="handleModal('blurr')" class="post__avatar">
+
+          <img
+            src="https://i.pinimg.com/originals/a6/58/32/a65832155622ac173337874f02b218fb.png"
+            alt=""
+          />
+        </div>
+        <div class="post__body">
+          <div class="post__header">
+            <div class="post__headerText">
+              <h3>
+                Jash Rashne
+                <span class="post__headerSpecial"
+                  >@rashnejash</span
+                >
+                <div class="expert-tag">
+                    EXPERT
+                </div>
+              </h3>
+            </div>
+            <div class="post__headerDescription">
+              <p>Here's one to my client's beautiful fatloss journey!.
+                <br>
+                Click on my pfp for expert advice.
+              </p>
+            </div>
+          </div>
+          <img width="450" height="240" class="video" src="./images/community/sami.jpg" >
+          <div class="post__footer">
+            <span class="material-icons"> repeat </span>
+            <span class="material-icons"> favorite_border </span>
+            <span class="material-icons"> publish </span>
+          </div>
+        </div>
+      </div>
+      <!-- post ends -->
+
+      <!-- post starts -->
+      <div class="post">
+        <div class="post__avatar">
+          <img
+            src="../images/community/icon.png"
+            alt=""
+          />
+        </div>
+
+        <div class="post__body">
+          <div class="post__header">
+            <div class="post__headerText">
+              <h3>
+                Anant Ambani
+                <span class="post__headerSpecial"
+                  ><span class="material-icons post__badge"> verified </span>@ambanirocks</span
+                >
+              </h3>
+            </div>
+            <div class="post__headerDescription">
+              <p>The king is here!</p>
+            </div>
+          </div>
+          <img
+            src="../images/community/ambani.png"
+            alt=""
+          />
+          <div class="post__footer">
+            <span class="material-icons"> repeat </span>
+            <span class="material-icons"> favorite_border </span>
+            <span class="material-icons"> publish </span>
+          </div>
+        </div>
+      </div>
+      <!-- post ends -->
+    </div>
+    <!-- feed ends -->
+
+    <!-- widgets starts -->
+    <div class="widgets">
+      <div class="widgets__input">
+        <span class="material-icons widgets__searchIcon"> search </span>
+        <input type="text" placeholder="Search Community" />
+      </div>
+
+      <div class="widgets__widgetContainer">
+        <h2>Recent Blogs</h2>
+        <blockquote class="twitter-tweet" ><p lang="en" dir="ltr">Yoga is a gift to mankind. Your choices as a <a href="https://twitter.com/hashtag/petparent?src=hash&amp;ref_src=twsrc%5Etfw">#petparent</a> can reduce your dog’s carbon pawprint 🐾<br><br>Our latest blog shares four sustainable and simple ways to care for your pet and the planet 🌎<br><br>💙 <a href="https://t.co/XekmwchvLe">https://t.co/XekmwchvLe</a> <a href="https://t.co/JdpgHe3Tx7">pic.twitter.com/JdpgHe3Tx7</a></p>&mdash; healthybud (@healthybudco) <a href="https://twitter.com/healthybudco/status/1551671919224692738?ref_src=twsrc%5Etfw">July 25, 2022</a></blockquote> 
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+    </div>
+  </div>
+    <script src="./js/community.js"></script>
+    <script src="./js/script.js"></script>
+    <!-- widgets ends -->
+  </body>
+</html>
